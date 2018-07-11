@@ -36,9 +36,10 @@ map <leader>f :MRU<CR>
 """"""""""""""""""""""""""""""
 let g:yankstack_yank_keys = ['y', 'd']
 
-nmap <c-p> <Plug>yankstack_substitute_older_paste
-nmap <c-n> <Plug>yankstack_substitute_newer_paste
-
+" nmap <c-p> <Plug>yankstack_substitute_older_paste
+" nmap <c-n> <Plug>yankstack_substitute_newer_paste
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
@@ -89,7 +90,7 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_next_key="\<C-s>"
+" let g:multi_cursor_next_key="\<C-s>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -138,12 +139,6 @@ nnoremap <silent> <leader>z :Goyo<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-go
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:go_fmt_command = "goimports"
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
@@ -167,3 +162,9 @@ let g:ale_lint_on_enter = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:vim_markdown_folding_disabled = 1
