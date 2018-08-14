@@ -2,7 +2,6 @@
 "     File Name           :     autoHEADER.vim
 "     Created By          :     shanzi
 "     Creation Date       :     [2012-10-03 23:53]
-"     Last Modified       :     [2013-04-05 00:46]
 "     Description         :     Auto insert comment header block for varies
 "                               programing language
 "--------------------------------------------------------------------------------
@@ -46,8 +45,8 @@ fun! s:insert_header_with_ft(ft)
             let messages=[['File Name' , s:filename],
                         \ ['Created By' , g:autoHEADER_default_author],
                         \ ['Creation Date' , '[' . strftime("%Y-%m-%d %H:%M") . ']'],
-                        \ ['Last Modified' , '[AUTO_UPDATE_BEFORE_SAVE]'],
                         \ ['Description' , ' '],]
+                        "\ ['Last Modified' , '[AUTO_UPDATE_BEFORE_SAVE]'],
 
             if  type(prefix) == type({})
                 let prefix_by_ft = get(prefix,a:ft)
@@ -106,7 +105,7 @@ fun! autoHEADER#enable()
     augroup autoHEADER
         autocmd!
         autocmd BufNewFile *.* call autoHEADER#make_header()
-        autocmd Bufwritepre,filewritepre *.* call autoHEADER#update_modified_time()
+        " autocmd Bufwritepre,filewritepre *.* call autoHEADER#update_modified_time()
     augroup END
 endfun
 
