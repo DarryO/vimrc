@@ -15,6 +15,7 @@ map = $
 " autocmd BufWinEnter * NERDTreeMirror
 " autocmd VimEnter * wincmd w
 "
+let g:vim_json_syntax_conceal = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | wincmd h | endif
 let NERDTreeMapOpenInTab='<Enter>'
 set colorcolumn=120
@@ -27,6 +28,7 @@ silent! nmap <F11> :set paste!<CR>
 " silent! map <F3> :NERDTreeFind<CR>
 " let g:NERDTreeMapActivateNode="<F3>"
 " let g:NERDTreeMapPreview="<F4>"
+
 
 map <F5> :call CompileRunGcc()<CR>
 

@@ -18,7 +18,7 @@ let s:style_list = [
             \                 'php' : '?>',
             \                 'jsp' : '%>',
             \                 }},
-            \    { 'style' : ['#'  , '#' , ''  , '#' ] , 'ft' : [ 'python' ,'python.django','ruby', 'perl' , 'sh','coffee' ] , 
+            \    { 'style' : ['#'  , '#' , ''  , '-' ] , 'ft' : [ 'python' ,'python.django','ruby', 'perl' , 'sh','coffee' ] , 
             \      'prefix' : {
             \                 'python' : '#! /usr/bin/env python',
             \                 'ruby' : '#! /usr/bin/env ruby',
@@ -44,10 +44,9 @@ fun! s:insert_header_with_ft(ft)
 
             let messages=[['File Name' , s:filename],
                         \ ['Created By' , g:autoHEADER_default_author],
-                        \ ['Creation Date' , '[' . strftime("%Y-%m-%d %H:%M") . ']'],
                         \ ['Description' , ' '],]
                         "\ ['Last Modified' , '[AUTO_UPDATE_BEFORE_SAVE]'],
-
+                        " \ ['Creation Date' , '[' . strftime("%Y-%m-%d %H:%M") . ']'],
             if  type(prefix) == type({})
                 let prefix_by_ft = get(prefix,a:ft)
                 if  type(prefix_by_ft)==type('') && len(prefix_by_ft)>0
@@ -61,7 +60,7 @@ fun! s:insert_header_with_ft(ft)
             endif
 
             " start of comment block
-            call append(start_line, style[0] . repeat(style[3], g:autoHEADER_fill_char_repeat))
+            call append(start_line, style[0] . ' ' . repeat(style[3], g:autoHEADER_fill_char_repeat))
             let start_line += 1
 
             for message in messages
@@ -73,7 +72,7 @@ fun! s:insert_header_with_ft(ft)
             let endline = start_line
 
             " end of comment block
-            call append(start_line,start_char . repeat(style[3], g:autoHEADER_fill_char_repeat) . style[2])
+            call append(start_line, start_char . ' ' . repeat(style[3], g:autoHEADER_fill_char_repeat) . style[2])
             let start_line += 1
 
             " appendix
