@@ -57,3 +57,4 @@ func! CompileRunGcc()
 				exec "!firefox %.html &"
 	endif
 endfunc
+let g:loaded_comfortable_motion = 1
