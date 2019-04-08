@@ -58,3 +58,11 @@ func! CompileRunGcc()
 	endif
 endfunc
 let g:loaded_comfortable_motion = 1
+
+func! Convert2To4()
+    set ts=2 sts=2 noet
+    retab!
+    set ts=4 sts=4 et
+    retab
+endfunc
+command! S2to4 call Convert2To4()
