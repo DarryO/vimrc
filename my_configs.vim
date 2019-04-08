@@ -66,3 +66,13 @@ func! Convert2To4()
     retab
 endfunc
 command! S2to4 call Convert2To4()
+
+
+" Uncomment the following to have Vim jump to the last position when
+" " reopening a file
+" if has("autocmd")
+"   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" endif
+
+" some mistake happened while in comment
+let loaded_matchparen = 1
