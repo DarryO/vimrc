@@ -21,4 +21,7 @@ cd ~/.vim
     --with-features=huge \
     --prefix=/path/to/install
 
-# make VIMRUNTIMEDIR=/usr/share/vim/vim80
+make && make install
+
+alias vim=/path/to/install/bin/vim
+alias vi=/path/to/install/bin/vim

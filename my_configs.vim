@@ -75,4 +75,4 @@ command! S2to4 call Convert2To4()
 " endif
 
 " some mistake happened while in comment
-let loaded_matchparen = 1
+" let loaded_matchparen = 1
