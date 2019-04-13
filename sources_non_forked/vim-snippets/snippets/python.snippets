@@ -240,7 +240,9 @@ snippet addnarg
 snippet addaarg
 	parser.add_argument("${0:arg}", action="${1:store_true}", default=${2:False}, help="${3:Help text}")
 snippet pargs
-	"${VISUAL:return }"parser.parse_args()
+	args = parser.parse_args()
+snippet pnargs
+	args = parser.parse_known_args()[0]
 
 # logging
 # glog = get log
