@@ -91,3 +91,4 @@ else " windows
     " do windows command
 endif"
 
+let g:go_version_warning = 0
