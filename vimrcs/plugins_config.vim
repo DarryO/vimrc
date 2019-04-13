@@ -66,6 +66,8 @@ let g:user_zen_mode='a'
 """"""""""""""""""""""""""""""
 ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
 snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+let g:snipMate = {}
+let g:snipMate.snippet_version = 1
 
 
 """"""""""""""""""""""""""""""

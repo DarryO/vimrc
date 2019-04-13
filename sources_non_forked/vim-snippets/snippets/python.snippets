@@ -229,6 +229,7 @@ snippet getopt
 			verbose = argument
 # argparse
 snippet addp
+	import argparse
 	parser = ${VISUAL:argparse.}ArgumentParser()
 snippet addsp
 	${0:sub_parser} = parser.add_subparsers().add_parser("${1:name}")
