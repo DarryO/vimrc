@@ -103,3 +103,7 @@ let g:vim_markdown_conceal = 0
 let g:username = 'lihao'
 let g:email = 'lihao@fabu.ai'
 
+autocmd FileType cc setlocal shiftwidth=2 tabstop=2
+autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+autocmd FileType c setlocal shiftwidth=2 tabstop=2
+
