@@ -14,7 +14,13 @@
 # W391: Blank line at the end of file
 # E126: Indent
 # W503, W504: line break after/before binary operator
-ignore = F812,H101,H202,H233,H301,H306,H401,H403,H404,H405,H501,D203,W391,E126,C901,W504,W503
+# E702: multiple statements in one line
+# F401: unused imported package
+# F841: variable assgned but never used
+# E282: space around operator
+# E127: over-indent
+# E271: type instance
+ignore = F812,H101,H202,H233,H301,H306,H401,H403,H404,H405,H501,D203,W391,E126,C901,W504,W503,E702,F401,F841,E282,E226,E231,E127,E271
 exclude =
     # No need to traverse our git directory
     .git,

@@ -1,6 +1,6 @@
+
 set nu
 set nowrap
-set clipboard=unnamed
 map <leader>1 1gt
 map <leader>2 2gt
 map <leader>3 3gt
@@ -75,4 +75,24 @@ command! S2to4 call Convert2To4()
 " endif
 
 " some mistake happened while in comment
-" let loaded_matchparen = 1
+" disable parent match
+let loaded_matchparen = 1
+
+let uname = substitute(system('uname'), '\n', '', '')
+" Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
+
+if uname == 'Linux'
+    " do linux
+    set clipboard=unnamedplus
+elseif uname == 'Darwin'
+    " do mac command
+    set clipboard=unnamed
+else " windows
+    " do windows command
+endif"
+
+let g:go_version_warning = 0
+let g:vim_markdown_conceal = 0
+let g:username = 'lihao'
+let g:email = 'lihao@fabu.ai'
+
