@@ -76,7 +76,7 @@ command! S2to4 call Convert2To4()
 
 " some mistake happened while in comment
 " disable parent match
-" let loaded_matchparen = 1
+let loaded_matchparen = 1
 
 let uname = substitute(system('uname'), '\n', '', '')
 " Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
@@ -92,3 +92,7 @@ else " windows
 endif"
 
 let g:go_version_warning = 0
+let g:vim_markdown_conceal = 0
+let g:username = 'lihao'
+let g:email = 'lihao@fabu.ai'
+
