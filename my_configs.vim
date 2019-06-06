@@ -91,6 +91,12 @@ let loaded_matchparen = 1
 " else " windows
 "     " do windows command
 " endif"
+"
+if has('win32')
+elseif has('unix')
+elseif has('macunix')
+else
+endif
 
 let g:go_version_warning = 0
 let g:vim_markdown_conceal = 0
