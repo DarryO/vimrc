@@ -98,8 +98,9 @@ elseif has('macunix')
 else
 endif
 
-let g:go_version_warning = 0
-let g:vim_markdown_conceal = 0
+let g:go_version_warning=0
+let g:vim_markdown_conceal=0
+set conceallevel=0
 let g:username = 'lihao'
 let g:email = 'lihao@fabu.ai'
 
