@@ -108,3 +108,6 @@ autocmd FileType cc setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 autocmd FileType c setlocal shiftwidth=2 tabstop=2
 
+set cursorcolumn
+set cursorline
+
