@@ -101,8 +101,8 @@ endif
 let g:go_version_warning=0
 let g:vim_markdown_conceal=0
 set conceallevel=0
-let g:username = 'lihao'
-let g:email = 'lihao@fabu.ai'
+let g:username = $NICKNAME
+let g:email = $MAIL
 
 autocmd FileType cc setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
