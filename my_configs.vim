@@ -1,4 +1,3 @@
-
 set nu
 set nowrap
 map <leader>1 1gt
@@ -18,11 +17,8 @@ map = $
 let g:vim_json_syntax_conceal = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | wincmd h | endif
 let NERDTreeMapOpenInTab='<Enter>'
-set colorcolumn=120
 silent! nmap <F3> :NERDTreeToggle<CR>
 silent! nmap <F12> :set wrap!<CR>
-
-
 silent! nmap <F11> :set paste!<CR>
 
 " silent! map <F3> :NERDTreeFind<CR>
@@ -110,4 +106,9 @@ autocmd FileType c setlocal shiftwidth=2 tabstop=2
 
 set cursorcolumn
 set cursorline
+set colorcolumn=120
+" hi CursorLine term=bold cterm=bold guibg=53
+hi CursorLine cterm=NONE ctermbg=8
+hi CursorColumn cterm=NONE ctermbg=8 ctermfg=white
+hi ColorColumn cterm=NONE ctermbg=8 ctermfg=white
 
