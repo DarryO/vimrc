@@ -100,9 +100,8 @@ set conceallevel=0
 let g:username = $NICKNAME
 let g:email = $MAIL
 
-autocmd FileType cc setlocal shiftwidth=2 tabstop=2
-autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
-autocmd FileType c setlocal shiftwidth=2 tabstop=2
+autocmd FileType cc,cpp,c setlocal shiftwidth=2 tabstop=2
+autocmd BufRead,BufNewFile Makefile.local set filetype=make
 
 set cursorcolumn
 set cursorline

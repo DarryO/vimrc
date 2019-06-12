@@ -15,7 +15,7 @@ import os
 import sys
 import argparse
 import pprint
-import logger
+import logging
 
 PP = pprint.PrettyPrinter().pprint
 
