@@ -14,14 +14,18 @@ map = $
 " autocmd BufWinEnter * NERDTreeMirror
 " autocmd VimEnter * wincmd w
 "
+nmap <F1> <nop>
 let g:vim_json_syntax_conceal = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | wincmd h | endif
 let NERDTreeMapOpenInTab='<Enter>'
+silent! nmap <F1> :NERDTreeFromBookmark<Space>
+silent! nmap <F2> :GitGutterToggle<cr>
 silent! nmap <F3> :NERDTreeToggle<CR>
+silent! nmap <F10> zR
 silent! nmap <F12> :set wrap!<CR>
 silent! nmap <F11> :set paste!<CR>
 
-" silent! map <F3> :NERDTreeFind<CR>
+" silent! map <F1> :NERDTreeFind<CR>
 " let g:NERDTreeMapActivateNode="<F3>"
 " let g:NERDTreeMapPreview="<F4>"
 
@@ -111,3 +115,7 @@ hi CursorLine cterm=NONE ctermbg=8
 hi CursorColumn cterm=NONE ctermbg=8 ctermfg=white
 hi ColorColumn cterm=NONE ctermbg=8 ctermfg=white
 
+" map <leader>f :MRU<CR>
+" let g:ctrlp_map = '<c-f>'
+" map <leader>j :CtrlP<cr>
+" map <c-b> :CtrlPBuffer<cr>
