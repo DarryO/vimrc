@@ -1,26 +1,24 @@
 [flake8]
 # it's not a bug that we aren't using all of hacking, ignore:
-# F812: list comprehension redefines ...
-# H101: Use TODO(NAME)
-# H202: assertRaises Exception too broad
-# H233: Python 3.x incompatible use of print operator
-# H301: one import per line
-# H306: imports not in alphabetical order (time, os)
-# H401: docstring should not start with a space
-# H403: multi line docstrings should end on a new line
-# H404: multi line docstring should start without a leading new line
-# H405: multi line docstring summary not separated with an empty line
-# H501: Do not use self.__dict__ for string formatting
-# W391: Blank line at the end of file
-# E126: Indent
-# W503, W504: line break after/before binary operator
-# E702: multiple statements in one line
-# F401: unused imported package
-# F841: variable assgned but never used
-# E282: space around operator
-# E127: over-indent
-# E271: type instance
-ignore = F812,H101,H202,H233,H301,H306,H401,H403,H404,H405,H501,D203,W391,E126,C901,W504,W503,E702,F401,F841,E282,E226,E231,E127,E271
+ignore = 
+    # H233: Python 3.x incompatible use of print operator
+    H233,
+    # H306: imports not in alphabetical order (time, os)
+    H306,
+    # H401: docstring should not start with a space
+    H401,
+    # H403: multi line docstrings should end on a new line
+    H403,
+    # H404: multi line docstring should start without a leading new line
+    H404,
+    # H405: multi line docstring summary not separated with an empty line
+    H405,
+    # H501: Do not use self.__dict__ for string formatting
+    H501,
+    # W503: line break after/before binary operator
+    W503,
+    # W504: line break after/before binary operator
+    W504,
 exclude =
     # No need to traverse our git directory
     .git,
