@@ -21,6 +21,7 @@ let NERDTreeMapOpenInTab='<Enter>'
 silent! nmap <F1> :NERDTreeFromBookmark<Space>
 silent! nmap <F2> :GitGutterToggle<cr>
 silent! nmap <F3> :NERDTreeToggle<CR>
+silent! nmap <F4> :%!python -m json.tool<CR>
 silent! nmap <F10> zR
 silent! nmap <F12> :set wrap!<CR>
 silent! nmap <F11> :set paste!<CR>

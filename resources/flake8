@@ -7,6 +7,8 @@ ignore =
     H306,
     # H401: docstring should not start with a space
     H401,
+    # E402: import on top level
+    E402,
     # H403: multi line docstrings should end on a new line
     H403,
     # H404: multi line docstring should start without a leading new line
