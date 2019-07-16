@@ -88,6 +88,19 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
+let NERDTreeShowLineNumber = 1
+let NERDTreeAutoCentor = 1
+let NERDTreeShowBookmarks = 1
+" only open NERDTree on console if dir was given
+" if set to 1, it always open NERDTree
+" if set to 0, it will not open NERDTree
+let g:nerdtree_tabs_open_on_console_startup=2
+
+" focus NREDTree if opening a dir, focus file if opening a file
+let g:nerdtree_tabs_smart_startup_focus=1
+
+let NERDTreeIgnore=['\.pyc$', '__pycache__', '\~$','\.swp', '\.o']
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
@@ -171,3 +184,13 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-codefmt
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call glaive#Install()
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType python AutoFormatBuffer autopep8
+augroup END

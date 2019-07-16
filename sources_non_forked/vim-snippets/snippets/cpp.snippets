@@ -105,6 +105,19 @@ snippet mfun
 	${4:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3}) {
 		${0}
 	}
+# add comment to func
+snippet cmctr
+	/**
+	 * @brief constructor
+	 * @param $1 ${2:Parameter description}
+	 * */
+# add comment to func
+snippet cmfun
+	/**
+	 * @brief ${1:Brief function description here}
+	 * @param $3 ${4:Parameter description}
+	 * @return ${2:Return parameter description}
+	 * */
 # member function implementation without parameters
 snippet dmfun0
 	/*! \brief ${4:Brief function description here}
