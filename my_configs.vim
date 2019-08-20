@@ -110,7 +110,7 @@ autocmd BufRead,BufNewFile Makefile.local set filetype=make
 
 set cursorcolumn
 set cursorline
-set colorcolumn=120
+set colorcolumn=80,120
 " hi CursorLine term=bold cterm=bold guibg=53
 hi CursorLine cterm=NONE ctermbg=8
 hi CursorColumn cterm=NONE ctermbg=8 ctermfg=white
