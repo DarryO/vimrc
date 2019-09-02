@@ -378,7 +378,8 @@ function <SID>TExpandVars()
 		if exists("g:license")
 			let l:license = g:license
 		else
-			let l:license = "MIT"
+			" let l:license = "MIT"
+			let l:license = "Apache V2.0"
 		endif
 	endif
 

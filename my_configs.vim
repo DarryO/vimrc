@@ -104,6 +104,7 @@ let g:vim_markdown_conceal=0
 set conceallevel=0
 let g:username = $NICKNAME
 let g:email = $MAIL
+let g:licensee = $LICENSE
 
 autocmd FileType cc,cpp,c setlocal shiftwidth=2 tabstop=2
 autocmd BufRead,BufNewFile Makefile.local set filetype=make
