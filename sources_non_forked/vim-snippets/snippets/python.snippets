@@ -22,6 +22,26 @@ snippet docs
 	Description: ${0}
 	"""
 
+snippet header
+	import os
+	import sys
+	import argparse
+	import pprint
+	import logging
+
+	PP = pprint.PrettyPrinter().pprint
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--debug", action="store_true", default=False, help="whether to debug")
+
+
+	def main():
+		args = parser.parse_args()
+
+
+	if __name__ == "__main__":
+		main()
+
 # Unittest skip
 snippet sk "skip unittests" b
 	@unittest.skip(${1:skip_reason})
