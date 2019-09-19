@@ -3,9 +3,10 @@
 # %USER%, %FDATE%
 #
 
+.PHONY: clean
 all:
 	%HERE%@echo "%FFILE% needs your attention"
 
-
-# vim:ft=make
-#
+clean:
+	-@rm -f dummy_file_not_exists
+	@echo "Cleanup"
