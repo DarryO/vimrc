@@ -10,6 +10,7 @@ map <leader>7 7gt
 map <leader>8 8gt
 map <leader>9 9gt
 map = $
+set shell=/bin/sh
 " autocmd VimEnter * NERDTree
 " autocmd BufWinEnter * NERDTreeMirror
 " autocmd VimEnter * wincmd w
