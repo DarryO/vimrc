@@ -41,7 +41,9 @@ snippet header
 
 	if __name__ == "__main__":
 		main()
-
+snippet nt
+	import collections
+	${0:var} = collections.namedtuple('${1:name}', '${2:attr}')
 # Unittest skip
 snippet sk "skip unittests" b
 	@unittest.skip(${1:skip_reason})
