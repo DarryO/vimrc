@@ -192,5 +192,6 @@ call glaive#Install()
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-  autocmd FileType python AutoFormatBuffer autopep8
+  " autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType python AutoFormatBuffer yapf
 augroup END
