@@ -21,6 +21,8 @@ ignore =
     W503,
     # W504: line break after/before binary operator
     W504,
+    C901,
+    E129
 exclude =
     # No need to traverse our git directory
     .git,
