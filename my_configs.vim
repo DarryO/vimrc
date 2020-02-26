@@ -123,8 +123,12 @@ hi ColorColumn cterm=NONE ctermbg=8 ctermfg=white
 " map <leader>j :CtrlP<cr>
 " map <c-b> :CtrlPBuffer<cr>
 
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+  let g:vimwiki_list = [{'path': '~/vimwiki/text/',
+          \ 'path_html': '~/vimwiki/html/',
+          \ 'template_path': '~/vimwiki/templates/',
+          \ 'template_default': 'def_template',
+          \ 'template_ext': '.html'}]
+
 let wiki.nested_syntaxes = {'ruby': 'ruby', 'python': 'python', 'c++': 'cpp', 'sh': 'sh', 'racket': 'racket'}
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_global_ext = 0
