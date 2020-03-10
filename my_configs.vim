@@ -124,7 +124,10 @@ hi ColorColumn cterm=NONE ctermbg=8 ctermfg=white
 " map <c-b> :CtrlPBuffer<cr>
 
   let g:vimwiki_list = [{'path': '~/vimwiki/text/',
+          \ 'index':'Home',
           \ 'path_html': '~/vimwiki/html/',
+          \ 'syntax': 'markdown',
+          \ 'ext': '.md',
           \ 'template_path': '~/vimwiki/templates/',
           \ 'template_default': 'def_template',
           \ 'template_ext': '.html'}]
